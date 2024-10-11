@@ -11,7 +11,6 @@ public class martialArtAPI {
     @GetMapping("/hello")
     public String helloWorld() {
         System.out.println("hello endpoint works");
-        System.out.println("hello endpoint works");
         return "Hello World!";
     }
 
