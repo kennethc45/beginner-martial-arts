@@ -1,0 +1,37 @@
+version: '3.5'
+
+services:
+  postgres:
+    # container_name: martial-arts-postgres-db
+    image: postgres:13
+    stdin_open: true
+    tty: true
+    ports:
+      - 54321:5432
+    environment:
+      POSTGRES_DB: martialArts
+      POSTGRES_USER: martialArts
+      POSTGRES_PASSWORD: martialArts
+      # SPRING_PROFILES_ACTIVE: local
+      # POSTGRES_HOST_AUTH_METHOD: trust
+      TZ: America/Chicago
+    # command: >
+    #   postgres -c log_statement=all
+
+  martial-arts-api:
+    container_name: martial-arts-api
+    image: martial-arts-api
+    build:
+      context: .  # Path to your Dockerfile
+      dockerfile: docker/Dockerfile
+    tty: true
+    ports:
+      - "8080:8080"  # Map port 8080 of the container to port 8080 on the host
+    environment:
+      EXAMPLE_VARIABLE: 1
+    # command: /bin/bash gradlew build ; /bin/bash gradlew run
+    command: /bin/bash /application/run-dev.sh
+    volumes:
+      - .:/application
+    depends_on:
+      - postgres
