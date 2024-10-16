@@ -18,10 +18,10 @@ public class MartialArt {
     private String origin;
 
 
-//    // Constructor
+    // Constructor
 //    public MartialArt() {}
 //
-//    public MartialArt(String name) {
+//    public MartialArt(Long id, String name, String origin) {
 //        this.name = name;
 //    }
 
