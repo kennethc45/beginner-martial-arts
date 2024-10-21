@@ -16,38 +16,4 @@ public class MartialArt {
     private Long id;
     private String name;
     private String origin;
-
-
-    // Constructor
-//    public MartialArt() {}
-//
-//    public MartialArt(Long id, String name, String origin) {
-//        this.name = name;
-//    }
-
-//    // Getters
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public String getOrigin() {
-//        return origin;
-//    }
-//
-//    // Setters
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public void setOrigin(String origin) {
-//        this.origin = origin;
-//    }
 }
