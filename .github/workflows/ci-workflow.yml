@@ -44,6 +44,12 @@ jobs:
       - name: Build Docker image
         run: docker build -t martial-arts-api:latest -f docker/Dockerfile .
 
+      # Install Docker Compose
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+
       - name: Run Docker Compose
         run: docker-compose up -d
 
