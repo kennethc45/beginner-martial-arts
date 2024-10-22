@@ -39,3 +39,15 @@ jobs:
         with:
           name: test-results
           path: build/reports/tests/test
+
+      # Optional: Docker steps for building and running the app
+      - name: Build Docker image
+        run: docker build -t martial-arts-api:latest .
+
+      - name: Run Docker Compose
+        run: docker-compose up -d
+
+      - name: Clean up Docker Compose
+        if: always()
+        run: docker-compose down
+
