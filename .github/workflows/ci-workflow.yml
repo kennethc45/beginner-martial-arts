@@ -42,7 +42,7 @@ jobs:
 
       # Optional: Docker steps for building and running the app
       - name: Build Docker image
-        run: docker build -t martial-arts-api:latest .
+        run: docker build -t martial-arts-api:latest -f docker/Dockerfile .
 
       - name: Run Docker Compose
         run: docker-compose up -d
