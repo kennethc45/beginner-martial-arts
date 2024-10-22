@@ -8,7 +8,7 @@ API for web application that allows beginners to explore martial arts based on t
     'https://github.com/<your_username>/beginner-martial-arts.git'
 2. Navigate to the project directory:
     'cd martial-arts-api'
-3. Build and compose up the docker container to run the application.
+3. Build and compose up the docker container to run the application:
     'docker-compose up --build'
 4. Click this link to view the api:
     'http://localhost:8080/test/hello'
